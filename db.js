@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/projeto2-bloomberg');
+// mongoose.connect('mongodb://localhost:27017/projeto2-bloomberg');
+mongoose.connect(process.env.mongo_connection)
 
 var userSchema = new mongoose.Schema({
     nome: String,
